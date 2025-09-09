@@ -107,7 +107,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 
 <Slider />
 
-<VideoSliderComponent></VideoSliderComponent>
+{/* <VideoSliderComponent></VideoSliderComponent> */}
 
 <div className="tshirt_Left">
 <Pickles showFilters={showFilters} limit={10}></Pickles>
@@ -180,7 +180,7 @@ your special moments unforgettable.
 
 </div>
 
-<VideoSliderComponent></VideoSliderComponent>
+{/* <VideoSliderComponent></VideoSliderComponent> */}
 
 <Header />
 
