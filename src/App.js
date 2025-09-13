@@ -47,7 +47,7 @@ import CategoryLemon from "./Products/PrintedSarees";
 // import HairGrowth from "./Products/HairGrowth";
 // import SandalwoodPowder from "./Products/SandalwoodPowder";
 // import CategoryGhee from "./Products/CategoryGhee";
-import Pickles from "./Products/Pickle";
+import Pickle from "./Products/Pickle";
 import TermsCondition from "./Pages/TermsCondition";
 import ReturnPolicy from "./Pages/ReturnPolicy";
 import AdminUsers from "./AdminUsers";
@@ -103,7 +103,7 @@ return (
 {/* <Route path="/CategoryJackfruit" element={<CategoryJackfruit />} /> */}
 <Route path="/CategoryLemon" element={<CategoryLemon />} />
 <Route path="/SequinsSarees" element={<SequinsSarees />} />
-<Route path="/Pickles" element={<Pickles />} />
+<Route path="/Pickle" element={<Pickle />} />
 <Route path="/AdminForget" element={<AdminForget />} />
 <Route path="/" element={<Home />} />
 <Route path="/ForgetPass" element={<ForgetPass />} />
