@@ -110,7 +110,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 {/* <VideoSliderComponent></VideoSliderComponent> */}
 
 <div className="tshirt_Left">
-<Pickle showFilters={showFilters} limit={5}></Pickle>
+<Pickle></Pickle>
 </div>
 
 {/*  */}
@@ -127,7 +127,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 {/*  */}
 
 <div className="tshirt_Left">
-<Pickle showFilters={showFilters} limit={5}></Pickle>
+<Pickle></Pickle>
 </div>
 
 <button onClick={seeAllProducts} 
