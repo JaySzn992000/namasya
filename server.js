@@ -773,27 +773,27 @@ res.status(500).json({ error: "Database query failed" });
 // });
 
 
-// app.get("/fetchProductslist", async (req, res) => {
-// try {
-// const result = await pool.query("SELECT * FROM _imgproduct");
-// res.json(result.rows);
-// } catch (err) {
-// console.error("Error fetching data:", err.message);
-// res.status(500).json({ error: "Database query failed" });
-// }
-// });
-
-
-
-app.get("/fetchProductslist", (req, res) => {
-db.query("SELECT * FROM imgproduct", (err, results) => {
-if (err) {
-console.error("Error fetching data:", err.stack);
-return res.status(500).json({ error: "Database query failed" });
+app.get("/fetchProductslist", async (req, res) => {
+try {
+const result = await pool.query("SELECT * FROM _imgproduct");
+res.json(result.rows);
+} catch (err) {
+console.error("Error fetching data:", err.message);
+res.status(500).json({ error: "Database query failed" });
 }
-res.json(results);
 });
-});
+
+
+
+// app.get("/fetchProductslist", (req, res) => {
+// db.query("SELECT * FROM imgproduct", (err, results) => {
+// if (err) {
+// console.error("Error fetching data:", err.stack);
+// return res.status(500).json({ error: "Database query failed" });
+// }
+// res.json(results);
+// });
+// });
 
 
 
