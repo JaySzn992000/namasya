@@ -84,106 +84,10 @@ return (
 
 <div>
 
-<Helmet>
-<title>Buy Best Homemade Pickles Online | Pickles & More</title>
-<meta
-name="description"
-content="Explore 100+ delicious homemade pickles including mango, garlic, carrot & more. Fast delivery across India."
-/>
-<meta
-name="keywords"
-content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pickles"
-/>
-<link rel="canonical" href="https://yourdomain.com" />
-<meta property="og:title" content="Pickles & More - Authentic Homemade Pickles" />
-<meta property="og:description" content="Discover tasty and hygienically packed pickles. Subscribe for updates and offers." />
-<meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg" />
-<meta property="og:url" content="https://yourdomain.com" />
-<meta name="robots" content="index, follow" />
-</Helmet>
-
-<Topnav></Topnav>
-<Navbar />
-
-<Slider />
-
-{/* <VideoSliderComponent></VideoSliderComponent> */}
-
-<div className="tshirt_Left">
-<Pickles showFilters={showFilters} limit={10}></Pickles>
-</div>
-
-{/*  */}
-
-
-{/*  */}
-
-<button onClick={seeAllProducts} className="seeLLProducts">View All</button>
-
-<div id="bottomFav_comp">
-<BottomFavcomp />
-</div>
-
-{/*  */}
-
 <div className="tshirt_Left">
 <Pickles showFilters={showFilters} limit={5}></Pickles>
+<h4>CHeck</h4>
 </div>
-
-<button onClick={seeAllProducts} 
-className="seeLLProducts">View All</button>
-<h4>Check</h4>
-
-{/*  */}
-
-<Contactus></Contactus>
-
-<a
-href='https://api.whatsapp.com/send/?phone=%2B919821187225&text&type=phone_number&app_absent=0'
-target="_blank"
-rel="noopener noreferrer"
->
-<img
-className="whatsapp_message"
-src="https://cdn-icons-png.freepik.com/256/3983/3983877.png?semt=ais_hybrid"
-alt=""
-loading="lazy"
-></img>
-
-</a>
-
-{/*  */}
-
-<div className="Secure_ordering">
-<h2>✨ Sanskriti – A Story Woven in Every Saree
-</h2>
-<p>We weave sarees that are graceful, timeless, and made 
-to celebrate every occasion. Each saree carries the essence 
-of tradition and elegance, making your moments truly 
-unforgettable.
-</p>
-
-</div>
-
-
-{/* SlidCakeImg */}
-
-<div className="subscribe_kk">
-
-<form onSubmit={sendEmail}>
-
-{successMessage && (
-<p className="success_message">{successMessage}</p>
-
-)}
-
-</form>
-
-</div>
-
-{/* <VideoSliderComponent></VideoSliderComponent> */}
-
-<Header />
 
 </div>
 
