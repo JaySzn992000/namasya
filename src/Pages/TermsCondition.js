@@ -32,7 +32,7 @@ By impliedly or expressly accepting these Terms of Use, You also accept and agre
 <h2 id="hFourTag">Privacy</h2>
 
 <p>
-namasya collects, stores, processes and uses Your information in accordance with our Privacy Policy. By using the Website and/ or by providing your information, you consent to the collection and use of the information you disclose on the Website by namasya in accordance with namasya’s Privacy Policy.
+Namasya collects, stores, processes and uses Your information in accordance with our Privacy Policy. By using the Website and/ or by providing your information, you consent to the collection and use of the information you disclose on the Website by namasya in accordance with namasya’s Privacy Policy.
 </p>
 
 <h2 id="hFourTag">Payment</h2>

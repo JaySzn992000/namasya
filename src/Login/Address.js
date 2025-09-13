@@ -43,7 +43,6 @@ const totalAmount = reactLocation.state?.totalAmount || 0;
 const quantities = reactLocation.state?.quantities || [];
 
 
-
 useEffect(() => {
 const storedUser = localStorage.getItem("loggedInUser");
 if (storedUser) {
@@ -83,6 +82,7 @@ if (!/^\d{6}$/.test(formData.pincode)) {
 alert("Pincode must contain only digits");
 return false;
 }
+
 
 if (!/^\d{10}$/.test(formData.mobilenumber)) {
 alert("Mobile number must be exactly 10 digits");

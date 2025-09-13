@@ -1,5 +1,6 @@
 /* Done */
 
+
 .normal_header .div_header {
 display: flex;
 justify-content: center;
@@ -39,10 +40,10 @@ font-size: 1.2rem;
 
 
 .normal_header .div_header .nMheader_dvLogo {
-width: 133px;
-margin-top: .9em;
+width: 147px;
+margin-top: .5em;
 margin-left: -2.7em;
-margin-right: -3.7em;
+margin-right: -3.5em;
 }
 
 
@@ -53,7 +54,7 @@ line-height: 3.4em;
 
 .normal_header ul li {
 font-size: .8rem;
-color: rgb(72, 69, 69);
+color: #202434;
 cursor: pointer;
 transition: 0.5s;
 }

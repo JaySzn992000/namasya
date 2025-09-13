@@ -24,7 +24,7 @@ at [Insert full Namasyaa address], India (hereinafter referred to as the
 "Company", "We", or "Namasyaa").
 This Privacy Policy outlines the types of personal data 
 we collect from users ("You", "User(s)") who access or use 
-the website www.namasyaa.com ("Website"), the purpose of collecting such 
+the website https://namasya.vercel.app ("Website"), the purpose of collecting such 
 information, how it is used, stored, processed, disclosed, and protected.
 Your privacy is important to us, and we are committed to safeguarding the 
 personal information you share with us.

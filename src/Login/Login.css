@@ -5,11 +5,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: auto;
-gap: 2.7em;
+gap: 3.5em;
 margin-top: 6.3em;
 line-height: 2.9em;
 text-align: start;
 }
+
 
 
 #logged_form img {
@@ -23,12 +24,13 @@ width: 245px;
 }
 
 
-
 #logged_form h2 {
 margin-bottom: 0.2em;
 font-size: 1.2rem;
 color: #808080;
+text-align: start;
 }
+
 
 #logged_form h4 {
 color: #000000;
@@ -59,8 +61,8 @@ padding: 12px;
 margin-top: 1.3em;
 border: none;
 line-height: 1.7em;
-color: rgb(0, 0, 0);
-background-color: #f88c74;
+color: #222;
+background-color: #f8dccc;
 cursor: pointer;
 font-size: 0.8rem;
 }
@@ -110,7 +112,7 @@ margin-bottom: 7.3em;
 
 
 #logged_form img {
-width: 217px;
+width: 100%;
 margin-right: 1.7em;
 }
 

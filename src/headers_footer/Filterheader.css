@@ -1,35 +1,79 @@
 /* Done */
 
+
+.headerFlex {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+row-gap: 1em;
+column-gap: 1.5em;
+background-color: #100424;
+border-bottom: 1px solid gainsboro;
+margin-top: 2.1em;
+padding: .5em;
+padding-top: 31px;
+}
+
+
+.ImgHeader {
+width: 163px;
+height: auto;
+}
+
+
+
+@media screen and (max-width: 769px) {
+
+.headerFlex {
+line-height: 2.5em;
+}
+
+.ImgHeader {
+width: 50vw;
+max-width: 145px;
+}
+
+}
+
+
 .flex_Container_Filter {
 display: flex;
 justify-content: center;
 margin-left: 317px;
-padding: 31px 0 227px;
-background-color: #202434;
+padding: 31px 0 207px;
+background-color: #f8dccc;
 }
 
 .header_dv {
 margin: 0.7em 4.7em 0em 0em;
 }
 
-
 .headerFilter .header_dvLogo {
 width: 141px;
 margin-top: .9em;
+margin-bottom: 2.1em;
 cursor: pointer;
 }
-
 
 .headerFilter .div_header_Filter {
 display: flex;
 justify-content: center;
 text-align: start;
-gap: 5em;
+gap: 5.3em;
 }
 
 
+.div_header_Filter i {
+font-size: 1.3rem;
+margin-right: .5em;
+color: #100424;
+}
+
+
+
 .headerFilter ul {
-line-height: 3.4em;
+line-height: 3em;
 margin: 0;
 }
 
@@ -41,13 +85,13 @@ font-size: 1.1rem;
 
 
 .div_header_Filter h4 {
-    font-size: 1rem;    
-    color: rgb(245, 222, 179);
+font-size: .9rem;
+color: #903c34;
 }
 
 
 .headerFilter ul li {
-color: rgb(255, 255, 255);
+color: #202434;
 transition: 0.5s;
 font-size: .8rem;
 cursor: pointer;
@@ -59,21 +103,16 @@ color: #f8a424;
 }
 
 
-.headerFilter ul i {
-color: rgb(255, 255, 255);
-margin-right: .5em;
-font-size: 1.4rem;
-cursor: pointer;
-}
-
-
 @media (max-width: 1036px) {
+
+.headerFlex {
+line-height: 2.5em;
+}
 
 .flex_Container_Filter {
 flex-direction: column;
 padding: 127px 47px 207px 47px;
 margin-left: 0;
-
 }
 
 .headerFilter .div_header_Filter {
@@ -127,6 +166,10 @@ gap: 2.7em;
 
 @media (min-width: 1037px) and (max-width: 1519px) {
 
+.headerFlx_left {
+margin-left: 27vw;
+}
+
 .flex_Container_Filter {
 margin-left: 297px;
 padding: 67px 37px 207px 57px;
@@ -136,13 +179,12 @@ padding: 67px 37px 207px 57px;
 .headerFilter .header_dvLogo {
 width: 133px;
 margin-top: 1.3em;
-margin-right: -2.3em;
+margin-right: -1.5em;
 margin-left: -1.7em;
 }
 
 .headerFilter ul li {
 font-size: 0.8rem;
-/* width: 117px; */
 }
 
 .headerFilter ul h3 {

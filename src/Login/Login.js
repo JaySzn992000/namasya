@@ -49,8 +49,9 @@ alert("Password must be at least 6 characters long.");
 return;
 }
 
+
 try {
-const response = await fetch("https://lavonne.onrender.com/fetchlogin", {
+const response = await fetch("http://localhost:3001/fetchlogin", {
 method: "POST",
 headers: {
 "Content-type": "application/json",
@@ -118,6 +119,7 @@ type={showPassword ? "text" : "password"}
 required
 maxLength={15}
 />
+
 <span
 className="eye-icon"
 onClick={() => setShowPassword(!showPassword)}

@@ -167,12 +167,11 @@ style={{ width: "90%" }}
 
 <div>
 {[
-"Aloe Vera Gel",
-"Buti Banana",
-"Beetroot Powder",
-"Natural Buti",
-"Sandalwood Powder",
-"Buti Hair",
+"Saree",
+"FloralSarees",
+"PastelSarees",
+"SequinsSarees",
+"PrintedSarees",
 ].map((name) => (
 <label key={name}>
 <input

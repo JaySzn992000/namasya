@@ -76,13 +76,14 @@ margin: 1em 0em 1em 0em;
 
 .Frm_edit button {
 border: none;
-background-color: #f85c74;
+background-color: #f8dccc;
 width: 97px;
 padding: 12px;
 margin-top: 2.5em;
 cursor: pointer;
-color: rgba(255, 255, 255, 0.97);
+color: rgb(0, 0, 0);
 }
+
 
 .Header_position {
 margin-top: 9.7em;

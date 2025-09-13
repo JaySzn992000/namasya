@@ -79,14 +79,16 @@ value = value.replace(/^\s+/, "");
 setformdata(prev => ({ ...prev, [name]: value }));
 }; 
 
+
 const registeration = async (e) => {
+
 e.preventDefault();
 
 const isValid = onsubmit(); 
 if (!isValid) return; 
 
 try {
-const response = await fetch("https://namasyaa.onrender.com/registerationPost", {
+const response = await fetch("http://localhost:3001/registerationPost", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",

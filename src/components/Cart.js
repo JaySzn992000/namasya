@@ -187,7 +187,8 @@ Rs <span>{totalAmount}</span>
 </h2>
 
 <button onClick={asyncProceed}>
-<i class="fas fa-shopping-cart" aria-hidden="true"></i>
+<img src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png"></img>
+{/* <i class="fas fa-shopping-cart" aria-hidden="true"></i> */}
 <h4>ORDER Now</h4>
 </button>
 

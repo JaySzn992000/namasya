@@ -38,21 +38,18 @@ src={AboutPickle}></img>
 <section>
 
 <h1>About !</h1>
-<h2>Lavonne- Celebrating The Girl In you!</h2>
+<h2>Namasya - Weaving Elegance with Tradition !</h2>
 <p>
 {" "}
-At Lavonne, we believe that celebration must be a way of life, and 
-we put in our best efforts to take all your celebrations a notch 
-higher with our delectable cakes. Our vision is to provide the 
-highest quality cakes at best prices, to all our customers within 
-the shortest span of time. So, after you order a cake, it can be 
-delivered within a few hours, fresh from the oven.
-Lavonne, the premium cake house, offers the widest range of delicious 
-cakes for all occasions. While all time favorites like chocolate 
-truffle and Fruit cocktail and end number of cup cakes are part 
-of our menu, we also offer highly customized cakes, for those special 
-days and special people. Our customers’ expectations and satisfaction 
-are our top most priority.
+At Namasya, we celebrate the timeless elegance of sarees 
+by blending tradition with modern style. Every saree in our 
+collection is thoughtfully crafted to reflect India's rich 
+heritage while meeting the fashion needs of today's women. 
+From graceful classics to contemporary drapes, we bring you 
+sarees that are made with premium fabrics, intricate detailing, 
+and a promise of quality. At Namasya, we believe a saree is not 
+just attire, it is a symbol of grace, culture, and confidence — 
+making every woman feel beautiful in her own unique way.
 </p>
 </section>
 

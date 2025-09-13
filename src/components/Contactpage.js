@@ -117,7 +117,7 @@ Contact Us
 <input
 type="text"
 name="name"
-placeholder="Your Name"
+placeholder="Name"
 value={formData.name}
 onChange={handleChange}
 required
@@ -128,7 +128,7 @@ required
 <input
 type="email"
 name="email"
-placeholder="Your Email"
+placeholder="Email"
 value={formData.email}
 onChange={handleChange}
 required
@@ -150,7 +150,7 @@ required
 <br />
 <textarea
 name="message"
-placeholder="Your Message"
+placeholder="Message Here"
 value={formData.message}
 onChange={handleChange}
 required

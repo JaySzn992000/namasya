@@ -481,6 +481,7 @@ style={{ marginLeft: ".4em" }}
 src="https://cdn-icons-png.flaticon.com/128/456/456283.png"
 alt=""
 loading="lazy"
+className="img_pf"
 />
 
 <li onClick={navitoAccount} style={{ marginLeft: "-.5em" }}>
@@ -495,6 +496,7 @@ loading="lazy"
 src="https://cdn-icons-png.flaticon.com/128/3059/3059486.png"
 alt=""
 loading="lazy"
+className="img_pf"
 />
 
 <div className="loggedDiv_nameEmail">
@@ -541,6 +543,7 @@ loading="lazy"
 {/*  */}
 
 <div className="flex_icon_">
+
 <img
 src="https://cdn-icons-png.flaticon.com/128/2822/2822682.png"
 className="img_pf"

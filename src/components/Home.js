@@ -3,8 +3,6 @@ import { useNavigate } from "react-router";
 import Navbar from "../headers_footer/navbar";
 import Header from "../headers_footer/header";
 import BottomFavcomp from "../componentsBoot/bottomFavcomp";
-import SlidCakeImg from "../Slider/CakeSlide.jpg";
-import Namasyaa from "../Slider/namasyaa.jpg";
 import Contactus from "./Contactus";
 import Slider from "../slider";
 import { Helmet } from "react-helmet";
@@ -13,6 +11,8 @@ import "./ProductListmodule.css";
 import "./Home.css";
 import Pickles from "../Products/Pickle";
 import Topnav from "../headers_footer/Topnav";
+import SlidCakeImg from "../Slider/CakeSlide.jpg";
+import Namasyaa from "../Slider/namasyaa.jpg";
 import VideoSliderComponent from "../videoslider";
 // import TestimonialSlider from "./Testimonial";
 // import CategoryMangoes from "../Products/CategoryMangoes";
@@ -154,12 +154,12 @@ loading="lazy"
 {/*  */}
 
 <div className="Secure_ordering">
-<h2>SweetBite - Har Cake Mein Ek Kahaani
+<h2>✨ Sanskriti – A Story Woven in Every Saree
 </h2>
-<p>We bake cakes that are fresh, delightful, and 
-crafted to suit every occasion, . each cake is 
-designed to bring smiles and make 
-your special moments unforgettable.
+<p>We weave sarees that are graceful, timeless, and made 
+to celebrate every occasion. Each saree carries the essence 
+of tradition and elegance, making your moments truly 
+unforgettable.
 </p>
 
 </div>

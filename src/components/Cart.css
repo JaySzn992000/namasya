@@ -113,13 +113,13 @@ padding-left: 27px;
 font-size: .9rem;
 margin-top: 1.2em;
 border: none;
-background-color: #f85c74;
+background-color: #f8dccc;
 cursor: pointer;
 }
 
 
 .flex_amount button h4 {
-color: #FFFFFF;
+color: #222;
 }
 
 .flex_amount img {
@@ -140,6 +140,7 @@ border: 1px solid #DCDCDC;
 cursor: pointer;
 }
 
+
 .flex_amount h1 {
 font-size: 1.3rem;
 margin-bottom: 0.3em;
@@ -149,6 +150,7 @@ color: #222;
 
 .flex_amount h4 {
 color: #222;
+margin-left: .5em;
 }
 
 
@@ -157,10 +159,9 @@ color: #222;
 }
 
 
-.fa-shopping-cart {
-color: #FFFFFF;
+/* .fa-shopping-cart {
 font-size: 1.2rem;
-}
+} */
 
 
 /* for When 

@@ -14,13 +14,13 @@ const pool = require("./config");
 
 
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://naturalbuti-jb4y.vercel.app',
-    'https://namasyaa.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+origin: [
+'http://localhost:3000',
+'https://naturalbuti-jb4y.vercel.app',
+'https://namasyaa.vercel.app'
+],
+methods: ['GET', 'POST', 'PUT', 'DELETE'],
+credentials: true
 }));
 
 
@@ -133,6 +133,7 @@ INSERT INTO _ecart (price, name, img)
 VALUES ($1, $2, $3)
 `;
 
+
 try {
 await pool.query(insertQuery, [price, name, img]);
 console.log("Total successfully");
@@ -144,127 +145,128 @@ res.status(500).json({ message: "Error fetched", error: err.message });
 });
 
 
-// app.post("/registerationPost", (req, res) => {
-// const { name, email, password, mobileno } = req.body;
-
-// // Check for duplicate mobile
-
-// const checkMobileQuery =
-// "SELECT mobileno FROM registeration WHERE mobileno = ? LIMIT 1";
-// db.query(checkMobileQuery, [mobileno], (err, mobileResults) => {
-// if (err) {
-// console.error("Database error (mobile):", err);
-// return res.status(200).json({
-// success: false,
-// message: "System error. Please try later.",
-// });
-// }
-
-
-// if (mobileResults.length > 0) {
-// return res.status(200).json({
-// success: false,
-// message: "Mobile number already registered",
-// });
-// }
-
-// // Check for duplicate email
-
-// const checkEmailQuery =
-// "SELECT email FROM registeration WHERE email = ? LIMIT 1";
-// db.query(checkEmailQuery, [email], (err, emailResults) => {
-// if (err) {
-// console.error("Database error (email):", err);
-// return res.status(200).json({
-// success: false,
-// message: "System error. Please try later.",
-// });
-// }
-
-// if (emailResults.length > 0) {
-// return res.status(200).json({
-// success: false,
-// message: "Email address already registered",
-// });
-// }
-
-// // Insert new user
-
-// const insertQuery =
-// "INSERT INTO registeration (name, email, password, mobileno) VALUES (?, ?, ?, ?)";
-// db.query(
-// insertQuery,
-// [name, email, password, mobileno],
-// (err, result) => {
-// if (err) {
-// console.error("Registration error:", err);
-// return res.status(200).json({
-// success: false,
-// message: "Registration failed. Try again.",
-// });
-// }
-// return res.status(200).json({
-// success: true,
-// message: "Registered successfully",
-// });
-// }
-// );
-// });
-// });
-// });
-
-//
-
-app.post("/registerationPost", async (req, res) => {
+app.post("/registerationPost", (req, res) => {
 const { name, email, password, mobileno } = req.body;
 
-try {
-// Step 1: Check for duplicate mobile
-const checkMobileQuery = `
-SELECT mobileno FROM _registeration WHERE mobileno = $1 LIMIT 1
-`;
-const mobileResult = await pool.query(checkMobileQuery, [mobileno]);
+// Check for duplicate mobile
 
-if (mobileResult.rows.length > 0) {
+const checkMobileQuery =
+"SELECT mobileno FROM registeration WHERE mobileno = ? LIMIT 1";
+db.query(checkMobileQuery, [mobileno], (err, mobileResults) => {
+if (err) {
+console.error("Database error (mobile):", err);
+return res.status(200).json({
+success: false,
+message: "System error. Please try later.",
+});
+}
+
+
+if (mobileResults.length > 0) {
 return res.status(200).json({
 success: false,
 message: "Mobile number already registered",
 });
 }
 
-// Step 2: Check for duplicate email
-const checkEmailQuery = `
-SELECT email FROM _registeration WHERE email = $1 LIMIT 1
-`;
-const emailResult = await pool.query(checkEmailQuery, [email]);
+// Check for duplicate email
 
-if (emailResult.rows.length > 0) {
+const checkEmailQuery =
+"SELECT email FROM registeration WHERE email = ? LIMIT 1";
+db.query(checkEmailQuery, [email], (err, emailResults) => {
+if (err) {
+console.error("Database error (email):", err);
+return res.status(200).json({
+success: false,
+message: "System error. Please try later.",
+});
+}
+
+if (emailResults.length > 0) {
 return res.status(200).json({
 success: false,
 message: "Email address already registered",
 });
 }
 
-// Step 3: Insert new user
-const insertQuery = `
-INSERT INTO _registeration (name, email, password, mobileno)
-VALUES ($1, $2, $3, $4)
-`;
-await pool.query(insertQuery, [name, email, password, mobileno]);
+// Insert new user
 
+const insertQuery =
+"INSERT INTO registeration (name, email, password, mobileno) VALUES (?, ?, ?, ?)";
+db.query(
+insertQuery,
+[name, email, password, mobileno],
+(err, result) => {
+if (err) {
+console.error("Registration error:", err);
+return res.status(200).json({
+success: false,
+message: "Registration failed. Try again.",
+});
+}
 return res.status(200).json({
 success: true,
 message: "Registered successfully",
 });
-
-} catch (err) {
-console.error("❌ Registration error:", err.message);
-return res.status(500).json({
-success: false,
-message: "System error. Please try later.",
-});
 }
+);
 });
+});
+
+});
+
+
+
+// app.post("/registerationPost", async (req, res) => {
+// const { name, email, password, mobileno } = req.body;
+
+// try {
+// // Step 1: Check for duplicate mobile
+// const checkMobileQuery = `
+// SELECT mobileno FROM _registeration WHERE mobileno = $1 LIMIT 1
+// `;
+// const mobileResult = await pool.query(checkMobileQuery, [mobileno]);
+
+// if (mobileResult.rows.length > 0) {
+// return res.status(200).json({
+// success: false,
+// message: "Mobile number already registered",
+// });
+// }
+
+// // Step 2: Check for duplicate email
+// const checkEmailQuery = `
+// SELECT email FROM _registeration WHERE email = $1 LIMIT 1
+// `;
+// const emailResult = await pool.query(checkEmailQuery, [email]);
+
+// if (emailResult.rows.length > 0) {
+// return res.status(200).json({
+// success: false,
+// message: "Email address already registered",
+// });
+// }
+
+// // Step 3: Insert new user
+// const insertQuery = `
+// INSERT INTO _registeration (name, email, password, mobileno)
+// VALUES ($1, $2, $3, $4)
+// `;
+// await pool.query(insertQuery, [name, email, password, mobileno]);
+
+// return res.status(200).json({
+// success: true,
+// message: "Registered successfully",
+// });
+
+// } catch (err) {
+// console.error("❌ Registration error:", err.message);
+// return res.status(500).json({
+// success: false,
+// message: "System error. Please try later.",
+// });
+// }
+// });
 
 
 
@@ -825,33 +827,33 @@ res.status(500).json({ message: "Fetch error", error: err.message });
 });
 
 
-// app.post("/fetchlogin", (req, res) => {
-// const FetchQuery = "SELECT * FROM registeration";
-// db.query(FetchQuery, (err, result) => {
-// if (err) {
-// console.log("Error fetched");
-// res.status(500).json({ message: "Error fetched", error: err.message });
-// } else {
-// console.log(result);
-// res.status(200).json(result);
-// }
-// });
-// });
-
-//
-
-app.post("/fetchlogin", async (req, res) => {
-const fetchQuery = "SELECT * FROM _registeration";
-
-try {
-const result = await pool.query(fetchQuery);
-console.log(result.rows);
-res.status(200).json(result.rows);
-} catch (err) {
-console.error("Error fetched:", err.message);
+app.post("/fetchlogin", (req, res) => {
+const FetchQuery = "SELECT * FROM registeration";
+db.query(FetchQuery, (err, result) => {
+if (err) {
+console.log("Error fetched");
 res.status(500).json({ message: "Error fetched", error: err.message });
+} else {
+console.log(result);
+res.status(200).json(result);
 }
 });
+});
+
+
+
+// app.post("/fetchlogin", async (req, res) => {
+// const fetchQuery = "SELECT * FROM _registeration";
+
+// try {
+// const result = await pool.query(fetchQuery);
+// console.log(result.rows);
+// res.status(200).json(result.rows);
+// } catch (err) {
+// console.error("Error fetched:", err.message);
+// res.status(500).json({ message: "Error fetched", error: err.message });
+// }
+// });
 
 
 // Forget Pass Login ,,

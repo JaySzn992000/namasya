@@ -316,10 +316,11 @@ Check
 
 <img
 className="iconDetails"
-src="https://www.flavoursguru.com/catalog/view/theme/default/image/cart-icon.svg"
+src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png"
 alt=""
 loading="lazy"
 ></img>
+
 ADD TO CART
 </button>
 
@@ -327,7 +328,7 @@ ADD TO CART
 <button className="go-toCart" id="btn" onClick={handleGoToCart}>
 <img
 className="iconDetails"
-src="https://www.flavoursguru.com/catalog/view/theme/default/image/order-now.svg"
+src="https://cdn-icons-png.flaticon.com/128/3185/3185876.png"
 loading="lazy"
 alt=""
 ></img>

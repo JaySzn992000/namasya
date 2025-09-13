@@ -23,7 +23,7 @@ return (
 
 <p>
 {" "}
-Please reach out to support@namasyaa.com within 7 days of order delivery. Our customer support team will get back to you within 48 hours of receiving the request.
+Please reach out to support@namasya.com within 7 days of order delivery. Our customer support team will get back to you within 48 hours of receiving the request.
 {" "}
 </p>
 
