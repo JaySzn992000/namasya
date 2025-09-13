@@ -37,6 +37,7 @@ alert("All fields are required!");
 return;
 }
 
+
 if (adminuser.trim().length < 3) {
 alert("Username must be at least 3 characters.");
 return;

@@ -393,6 +393,7 @@ alt=""
 
 {/*  */}
 
+
 <div className="flex_nav_ProfileSection">
 
 <ul className="nav_profileSection">
@@ -429,8 +430,6 @@ src={Cart_Icon}
 onClick={navigateEcart}
 className="fa fa-shopping-cart navProfile_img"
 ></img>
-
-
 
 
 {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
@@ -472,7 +471,9 @@ alt=""
 loading="lazy"
 ></img>
 
+
 {/*  */}
+
 
 <div className="flex_icon_">
 

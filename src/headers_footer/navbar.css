@@ -83,7 +83,7 @@ cursor: pointer;
 
 
 .Product_navbar .nav_profileSection li a {
-color: rgb(255, 255, 255);
+color: #202434;
 }
 
 
@@ -200,6 +200,7 @@ z-index: 999;
 cursor: pointer;
 }
 
+
 .search_products {
 width: 0;
 padding: 11px;
@@ -301,7 +302,7 @@ transition: 0.5s;
 
 
 .flex_div_prfle .flex_icon_ li a {
-color: rgb(255, 255, 255);
+color: #202434;
 }
 
 
