@@ -15,7 +15,7 @@ const pool = require("./config");
 
 app.use(cors({
 origin: [
-'https://namasyaa.vercel.app'
+'https://namasya.vercel.app'
 ],
 methods: ['GET', 'POST', 'PUT', 'DELETE'],
 credentials: true
