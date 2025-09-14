@@ -41,7 +41,7 @@ import AdminUpdate from "./AdminUpdate";
 import DashboardcomXKPbcadafcddcfadacbPKXproductlistsearchdashboard from "./Dashboard";
 import Message from "./components/Message";
 import SequinsSarees from "./Products/SequinsSarees";
-import Pickles from "./Products/Pickle";
+import Pickle from "./Products/Pickle";
 import TermsCondition from "./Pages/TermsCondition";
 import ReturnPolicy from "./Pages/ReturnPolicy";
 import AdminUsers from "./AdminUsers";
@@ -89,7 +89,7 @@ return (
 <Route path="/PastelSarees" element={<PastelSarees />} />
 <Route path="/PrintedSarees" element={<PrintedSarees />} />
 <Route path="/SequinsSarees" element={<SequinsSarees />} />
-<Route path="/Pickles" element={<Pickles />} />
+<Route path="/Pickle" element={<Pickle />} />
 <Route path="/AdminForget" element={<AdminForget />} />
 <Route path="/" element={<Home />} />
 <Route path="/ForgetPass" element={<ForgetPass />} />
