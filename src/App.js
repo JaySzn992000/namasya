@@ -23,11 +23,11 @@ import NavSliderDash from "./NavSliderDash";
 import TlPrdctOrdrearn from "./DashboardADmin/TlPrdctOrdrearn";
 import Navbar from "./headers_footer/navbar";
 import Home from "./components/Home";
-
 import PastelSarees from "./Products/PastelSarees";
 import Contactus from "./components/Contactus";
 import VideoSliderComponent from "./videoslider";
 import PrintedSarees from "./Products/PrintedSarees";
+import FloralSarees from "./Products/FloralSarees";
 import Aboutus from "./components/about";
 import Contactpage from "./components/Contactpage";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
@@ -89,6 +89,9 @@ return (
 <Route path="/PastelSarees" element={<PastelSarees />} />
 <Route path="/PrintedSarees" element={<PrintedSarees />} />
 <Route path="/SequinsSarees" element={<SequinsSarees />} />
+
+<Route path="/FloralSarees" element={<FloralSarees />} />
+
 <Route path="/Pickle" element={<Pickle />} />
 <Route path="/AdminForget" element={<AdminForget />} />
 <Route path="/" element={<Home />} />

@@ -527,8 +527,8 @@ loading="lazy"
 
 
 <div className="flex_icon_">
-<img style={{width : '27px'}}
-src="https://cdn-icons-png.flaticon.com/128/7278/7278792.png"
+<img style={{width : '33px'}}
+src="https://cdn-icons-png.flaticon.com/128/17981/17981545.png"
 className="img_pf"
 alt=""
 loading="lazy"
@@ -536,8 +536,9 @@ loading="lazy"
 
 
 <li onClick={seeAllProducts}>
-<a href="">See All Pickles</a>
+<a href="">Sarees</a>
 </li>
+
 
 </div>
 

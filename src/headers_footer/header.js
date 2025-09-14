@@ -122,10 +122,10 @@ src={LogoNitiArya} alt="logo"></img>
 
 <ul>
 <h4>Get In Touch</h4>
-<li><a>+91 8874 205 503</a></li>
+<li><a>+91 9867 609 897</a></li>
 <li><a>customercare@namasya.com</a></li>
-<li><a>SCF-11, Old Delhi Rd, near AKD TOWER, 
-<br></br> Sector 14, Gurugram, Haryana 122001</a></li>
+<li><a>Shop no 23/24, near Mega Mall 
+<br></br>Andheri Mumbai, 400053</a></li>
 </ul>
 
 {/*  */}

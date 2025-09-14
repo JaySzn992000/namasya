@@ -17,7 +17,7 @@ const query = new URLSearchParams(location.search).get("search");
 
 useEffect(() => {
 axios
-.get("https://lavonne.onrender.com/fetchProductslistBlazers")
+.get("https://namasya.onrender.com/fetchProductslistBlazers")
 .then((response) => {
 console.log("Fetched Amla Pickles products:", response.data); 
 setAllProducts(response.data); 
@@ -34,7 +34,7 @@ console.error("Error fetching Amla Pickles products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("https://lavonne.onrender.com/fetchProductslist", {
+.get("https://namasya.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -139,7 +139,7 @@ product details */}
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://lavonne.onrender.com${product.file_path}`}
+src={`https://namasya.onrender.com${product.file_path}`}
 alt={product.name}
 />
 </Link>

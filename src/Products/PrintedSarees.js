@@ -19,7 +19,7 @@ const query = new URLSearchParams(location.search).get("search"); // Extract
 
 useEffect(() => {
 axios
-.get("https://namasyaa-47ex.onrender.com/fetchProductslistPants")
+.get("https://namasya.onrender.com/fetchProductslistPants")
 .then((response) => {
 console.log("Fetched Lemon Pickles products:", response.data); 
 setAllProducts(response.data); // Set all products
@@ -38,7 +38,7 @@ console.error("Error fetching Lemon Pickles products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("https://namasyaa-47ex.onrender.com/fetchProductslist", {
+.get("https://namasya.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 
@@ -161,7 +161,7 @@ product details */}
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://namasyaa-47ex.onrender.com${product.file_path}`}
+src={`https://namasya.onrender.com${product.file_path}`}
 alt={product.name}
 />
 </Link>

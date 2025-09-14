@@ -184,10 +184,6 @@ unforgettable.
 
 <Header />
 
-<h2>
-    Updated Code
-</h2>
-
 </div>
 
 );

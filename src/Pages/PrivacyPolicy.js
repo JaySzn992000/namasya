@@ -17,11 +17,11 @@ return (
 
 <p>
 {" "}
-Namasyaa Clothing Private Limited is a company incorporated 
+Namasya Clothing Private Limited is a company incorporated 
 under the provisions of the Indian Companies Act, 2013, bearing corporate 
 identification number [CIN to be inserted], with its registered office 
-at [Insert full Namasyaa address], India (hereinafter referred to as the 
-"Company", "We", or "Namasyaa").
+at [Insert full Namasya address], India (hereinafter referred to as the 
+"Company", "We", or "Namasya").
 This Privacy Policy outlines the types of personal data 
 we collect from users ("You", "User(s)") who access or use 
 the website https://namasya.vercel.app ("Website"), the purpose of collecting such 

@@ -10,11 +10,9 @@ margin-bottom: .5em;
 line-height: 2.7em;
 }
 
-
 .about_flex_ section {
 width: 577px;
 }
-
 
 .about_flex_ img {
 width: 457px;
@@ -45,6 +43,7 @@ color: rgb(116, 115, 115);
 
 
 @media (max-width: 1024px) {
+
 
 .about_flex_ {
 flex-direction: column;
@@ -96,12 +95,13 @@ gap: 4.3vw;
 }
 
 .about_flex_ h1 {
-font-size: 2rem;
+font-size: 1.9rem;
 }
 
 .about_flex_ h2 {
 font-size: 1.2rem;
 text-align: start;
+margin-top: .4em;
 }
 
 
