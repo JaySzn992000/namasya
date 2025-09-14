@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 import "./ProductListmodule.css";
 import "./Home.css";
-import Pickles from "../Products/Pickle";
+import Pickle from "../Products/Pickle";
 import Topnav from "../headers_footer/Topnav";
 import SlidCakeImg from "../Slider/CakeSlide.jpg";
 import Namasyaa from "../Slider/namasyaa.jpg";
@@ -110,7 +110,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 {/* <VideoSliderComponent></VideoSliderComponent> */}
 
 <div className="tshirt_Left">
-<Pickles showFilters={showFilters} limit={10}></Pickles>
+<Pickle showFilters={showFilters} limit={10}></Pickle>
 </div>
 
 {/*  */}
@@ -127,7 +127,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 {/*  */}
 
 <div className="tshirt_Left">
-<Pickles showFilters={showFilters} limit={5}></Pickles>
+<Pickle showFilters={showFilters} limit={10}></Pickle>
 </div>
 
 <button onClick={seeAllProducts} 
