@@ -3,17 +3,16 @@ import { useNavigate } from "react-router";
 import Navbar from "../headers_footer/navbar";
 import Header from "../headers_footer/header";
 import BottomFavcomp from "../componentsBoot/bottomFavcomp";
+import SlidCakeImg from "../Slider/CakeSlide.jpg";
 import Contactus from "./Contactus";
 import Slider from "../slider";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 import "./ProductListmodule.css";
 import "./Home.css";
-import Pickle from "../Products/Pickle";
+import Pickles from "../Products/Pickle";
 import Topnav from "../headers_footer/Topnav";
-import SlidCakeImg from "../Slider/CakeSlide.jpg";
-import Namasyaa from "../Slider/namasyaa.jpg";
-import VideoSliderComponent from "../videoslider";
+// import VideoSliderComponent from "../videoslider";
 // import TestimonialSlider from "./Testimonial";
 // import CategoryMangoes from "../Products/CategoryMangoes";
 // import DeliveryBanner from "../OtherImages/DeliveryBanner.jpg";
@@ -107,10 +106,8 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 
 <Slider />
 
-{/* <VideoSliderComponent></VideoSliderComponent> */}
-
 <div className="tshirt_Left">
-<Pickle></Pickle>
+<Pickles showFilters={showFilters} limit={10}></Pickles>
 </div>
 
 {/*  */}
@@ -127,7 +124,7 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 {/*  */}
 
 <div className="tshirt_Left">
-<Pickle></Pickle>
+<Pickles showFilters={showFilters} limit={5}></Pickles>
 </div>
 
 <button onClick={seeAllProducts} 
@@ -154,20 +151,29 @@ loading="lazy"
 {/*  */}
 
 <div className="Secure_ordering">
-<h2>✨ Sanskriti – A Story Woven in Every Saree
+<h2>NATURAL BEAUTY SOLUTIONS FOR YOU
 </h2>
-<p>We weave sarees that are graceful, timeless, and made 
-to celebrate every occasion. Each saree carries the essence 
-of tradition and elegance, making your moments truly 
-unforgettable.
+<p>We make products that cater to all skin types. 
+They are intuitive, solution oriented & inclusive of 
+all Indian skin types and shades.
 </p>
 
+<img src="https://naturalbuti.com/wp-content/uploads/2024/07/image-14-2048x365.png" 
+alt=""
+loading="lazy"/>
+
 </div>
+
+<img src={SlidCakeImg}
+loading="lazy"
+alt="Variety of Homemade Pickles"
+className="DlvyImg"
+></img>
 
 
 {/* SlidCakeImg */}
 
-<div className="subscribe_kk">
+<div className="subscribe_k">
 
 <form onSubmit={sendEmail}>
 
@@ -179,8 +185,6 @@ unforgettable.
 </form>
 
 </div>
-
-{/* <VideoSliderComponent></VideoSliderComponent> */}
 
 <Header />
 
