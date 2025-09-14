@@ -113,7 +113,7 @@ wishlistStatus[product.id] ? "active_wishlist" : ""
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://lavonne.onrender.com${product.file_path}`}
+src={`https://namasya.onrender.com${product.file_path}`}
 alt={product.name}
 className="product_image"
 />
@@ -150,9 +150,12 @@ className="review_icon"
 </section>
 </div>
 
-<div className="header_Filter">
+{/* <div className="header_Filter">
 {showFilters && <Filterheader />}
-</div>
+</div> */}
+
+{/* <Filterheader></Filterheader> */}
+
 </div>
 
 );

@@ -13,7 +13,7 @@ import OwnerDashboard from "./ownerDashboard";
 import ItemHistory from "./itemhistory";
 import Profile from "./RegisterationsLogin/Profile";
 import WishList from "./components/WishList";
-import Address from "./Login/Address";  
+import Address from "./Login/Address";
 import EditProfile from "./EditProfile";
 import Adminlogin from "./Adminlogin";
 import DBProducts from "./DBProducts";
@@ -23,11 +23,11 @@ import NavSliderDash from "./NavSliderDash";
 import TlPrdctOrdrearn from "./DashboardADmin/TlPrdctOrdrearn";
 import Navbar from "./headers_footer/navbar";
 import Home from "./components/Home";
-import FloralSarees from "./Products/FloralSarees";
-import PastelSarees from "./Products/PastelSarees";
+import AloeVeraGel from "./Products/AloeVeraGel";
+import BananaPowder from "./Products/BananaPowder";
 import Contactus from "./components/Contactus";
 import VideoSliderComponent from "./videoslider";
-import PrintedSarees from "./Products/PrintedSarees";
+import LicoricePowder from "./Products/LicoricePowder";
 import Aboutus from "./components/about";
 import Contactpage from "./components/Contactpage";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
@@ -40,6 +40,7 @@ import AdminRegisteration from "./AdminRegisteration";
 import AdminUpdate from "./AdminUpdate";
 import DashboardcomXKPbcadafcddcfadacbPKXproductlistsearchdashboard from "./Dashboard";
 import Message from "./components/Message";
+<<<<<<< HEAD
 // import CategoryJackfruit from "./Products/CategoryJackfruit";
 // import KasturiHaldi from "./Products/KasturiHaldi";
 import SequinsSarees from "./Products/SequinsSarees";
@@ -47,6 +48,15 @@ import CategoryLemon from "./Products/PrintedSarees";
 // import HairGrowth from "./Products/HairGrowth";
 // import SandalwoodPowder from "./Products/SandalwoodPowder";
 // import CategoryGhee from "./Products/CategoryGhee";
+=======
+import CategoryJackfruit from "./Products/CategoryJackfruit";
+import KasturiHaldi from "./Products/KasturiHaldi";
+import BeetrootPowder from "./Products/BeetrootPowder";
+import CategoryLemon from "./Products/LicoricePowder";
+import HairGrowth from "./Products/HairGrowth";
+import SandalwoodPowder from "./Products/SandalwoodPowder";
+import CategoryGhee from "./Products/CategoryGhee";
+>>>>>>> dfeb07257ac65d1a0ab297537ed659dbf9176f2f
 import Pickle from "./Products/Pickle";
 import TermsCondition from "./Pages/TermsCondition";
 import ReturnPolicy from "./Pages/ReturnPolicy";
@@ -57,7 +67,7 @@ import { BarChart, PieChart } from "recharts";
 import TestimonialSlider from "./components/Testimonial";
 import Cart from "./components/Cart";
 import { Navigate } from "react-router-dom";
-// import Chilli from "./Products/KasturiHaldi";
+import Chilli from "./Products/KasturiHaldi";
 
 
 function App () {
@@ -93,16 +103,21 @@ return (
 <Route path="/NavSliderDash" element={<NavSliderDash />} />
 <Route path="/TlPrdctOrdrearn" element={<TlPrdctOrdrearn />} />
 <Route path="/Navbar" element={<Navbar />} />
-<Route path="/FloralSarees" element={<FloralSarees />} />
-<Route path="/PastelSarees" element={<PastelSarees />} />
-{/* <Route path="/KasturiHaldi" element={<KasturiHaldi />} /> */}
-<Route path="/PrintedSarees" element={<PrintedSarees />} />
-{/* <Route path="/HairGrowth" element={<HairGrowth />} /> */}
-{/* <Route path="/SandalwoodPowder" element={<SandalwoodPowder />} /> */}
-{/* <Route path="/CategoryGhee" element={<CategoryGhee />} /> */}
-{/* <Route path="/CategoryJackfruit" element={<CategoryJackfruit />} /> */}
+<Route path="/AloeVeraGel" element={<AloeVeraGel />} />
+<Route path="/BananaPowder" element={<BananaPowder />} />
+
+<Route path="/KasturiHaldi" element={<KasturiHaldi />} />
+<Route path="/LicoricePowder" element={<LicoricePowder />} />
+<Route path="/HairGrowth" element={<HairGrowth />} />
+<Route path="/SandalwoodPowder" element={<SandalwoodPowder />} />
+<Route path="/CategoryGhee" element={<CategoryGhee />} />
+<Route path="/CategoryJackfruit" element={<CategoryJackfruit />} />
 <Route path="/CategoryLemon" element={<CategoryLemon />} />
+<<<<<<< HEAD
 <Route path="/SequinsSarees" element={<SequinsSarees />} />
+=======
+<Route path="/BeetrootPowder" element={<BeetrootPowder />} />
+>>>>>>> dfeb07257ac65d1a0ab297537ed659dbf9176f2f
 <Route path="/Pickle" element={<Pickle />} />
 <Route path="/AdminForget" element={<AdminForget />} />
 <Route path="/" element={<Home />} />
