@@ -1697,7 +1697,7 @@ console.log(`Server is running PORT on ${PORT}`);
 
 setInterval(() => {
   axios
-    .get("https://naturalbuti.onrender.com/ping")
+    .get("https://namasya.vercel.app/ping")
     .then(() => {
       console.log("Pinged self to stay awake");
     })
