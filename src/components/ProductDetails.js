@@ -211,7 +211,7 @@ desktop view */}
 <div className="thumbnails-container">
 <img
 className="thumbnail"
-src={`https://namasya.onrender.com${arrayStore.file_path1}`}
+src={arrayStore.file_path1}
 alt="home made pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path1)}
@@ -219,7 +219,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path1)}
 
 <img
 className="thumbnail"
-src={`https://namasya.onrender.com${arrayStore.file_path2}`}
+src={arrayStore.file_path2}
 alt="ingredients used pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path2)}
@@ -227,7 +227,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path2)}
 
 <img
 className="thumbnail"
-src={`https://namasya.onrender.com${arrayStore.file_path3}`}
+src={arrayStore.file_path3}
 alt="customized pickles"
 onClick={() => handleThumbnailClick(arrayStore.file_path3)}
 loading="lazy"
@@ -243,7 +243,7 @@ with zoom */}
 <Zoom>
 <img
 className="product_img"
-src={`https://namasya.onrender.com${mainImage}`}
+src={mainImage}
 alt={arrayStore.name}
 loading="lazy"
 />
