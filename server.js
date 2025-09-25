@@ -145,128 +145,128 @@ res.status(500).json({ message: "Error fetched", error: err.message });
 });
 
 
-app.post("/registerationPost", (req, res) => {
-const { name, email, password, mobileno } = req.body;
-
-// Check for duplicate mobile
-
-const checkMobileQuery =
-"SELECT mobileno FROM registeration WHERE mobileno = ? LIMIT 1";
-db.query(checkMobileQuery, [mobileno], (err, mobileResults) => {
-if (err) {
-console.error("Database error (mobile):", err);
-return res.status(200).json({
-success: false,
-message: "System error. Please try later.",
-});
-}
-
-
-if (mobileResults.length > 0) {
-return res.status(200).json({
-success: false,
-message: "Mobile number already registered",
-});
-}
-
-// Check for duplicate email
-
-const checkEmailQuery =
-"SELECT email FROM registeration WHERE email = ? LIMIT 1";
-db.query(checkEmailQuery, [email], (err, emailResults) => {
-if (err) {
-console.error("Database error (email):", err);
-return res.status(200).json({
-success: false,
-message: "System error. Please try later.",
-});
-}
-
-if (emailResults.length > 0) {
-return res.status(200).json({
-success: false,
-message: "Email address already registered",
-});
-}
-
-// Insert new user
-
-const insertQuery =
-"INSERT INTO registeration (name, email, password, mobileno) VALUES (?, ?, ?, ?)";
-db.query(
-insertQuery,
-[name, email, password, mobileno],
-(err, result) => {
-if (err) {
-console.error("Registration error:", err);
-return res.status(200).json({
-success: false,
-message: "Registration failed. Try again.",
-});
-}
-return res.status(200).json({
-success: true,
-message: "Registered successfully",
-});
-}
-);
-});
-});
-
-});
-
-
-
-// app.post("/registerationPost", async (req, res) => {
+// app.post("/registerationPost", (req, res) => {
 // const { name, email, password, mobileno } = req.body;
 
-// try {
-// // Step 1: Check for duplicate mobile
-// const checkMobileQuery = `
-// SELECT mobileno FROM _registeration WHERE mobileno = $1 LIMIT 1
-// `;
-// const mobileResult = await pool.query(checkMobileQuery, [mobileno]);
+// // Check for duplicate mobile
 
-// if (mobileResult.rows.length > 0) {
+// const checkMobileQuery =
+// "SELECT mobileno FROM registeration WHERE mobileno = ? LIMIT 1";
+// db.query(checkMobileQuery, [mobileno], (err, mobileResults) => {
+// if (err) {
+// console.error("Database error (mobile):", err);
+// return res.status(200).json({
+// success: false,
+// message: "System error. Please try later.",
+// });
+// }
+
+
+// if (mobileResults.length > 0) {
 // return res.status(200).json({
 // success: false,
 // message: "Mobile number already registered",
 // });
 // }
 
-// // Step 2: Check for duplicate email
-// const checkEmailQuery = `
-// SELECT email FROM _registeration WHERE email = $1 LIMIT 1
-// `;
-// const emailResult = await pool.query(checkEmailQuery, [email]);
+// // Check for duplicate email
 
-// if (emailResult.rows.length > 0) {
+// const checkEmailQuery =
+// "SELECT email FROM registeration WHERE email = ? LIMIT 1";
+// db.query(checkEmailQuery, [email], (err, emailResults) => {
+// if (err) {
+// console.error("Database error (email):", err);
+// return res.status(200).json({
+// success: false,
+// message: "System error. Please try later.",
+// });
+// }
+
+// if (emailResults.length > 0) {
 // return res.status(200).json({
 // success: false,
 // message: "Email address already registered",
 // });
 // }
 
-// // Step 3: Insert new user
-// const insertQuery = `
-// INSERT INTO _registeration (name, email, password, mobileno)
-// VALUES ($1, $2, $3, $4)
-// `;
-// await pool.query(insertQuery, [name, email, password, mobileno]);
+// // Insert new user
 
+// const insertQuery =
+// "INSERT INTO registeration (name, email, password, mobileno) VALUES (?, ?, ?, ?)";
+// db.query(
+// insertQuery,
+// [name, email, password, mobileno],
+// (err, result) => {
+// if (err) {
+// console.error("Registration error:", err);
+// return res.status(200).json({
+// success: false,
+// message: "Registration failed. Try again.",
+// });
+// }
 // return res.status(200).json({
 // success: true,
 // message: "Registered successfully",
 // });
-
-// } catch (err) {
-// console.error("❌ Registration error:", err.message);
-// return res.status(500).json({
-// success: false,
-// message: "System error. Please try later.",
-// });
 // }
+// );
 // });
+// });
+
+// });
+
+
+
+app.post("/registerationPost", async (req, res) => {
+const { name, email, password, mobileno } = req.body;
+
+try {
+// Step 1: Check for duplicate mobile
+const checkMobileQuery = `
+SELECT mobileno FROM _registeration WHERE mobileno = $1 LIMIT 1
+`;
+const mobileResult = await pool.query(checkMobileQuery, [mobileno]);
+
+if (mobileResult.rows.length > 0) {
+return res.status(200).json({
+success: false,
+message: "Mobile number already registered",
+});
+}
+
+// Step 2: Check for duplicate email
+const checkEmailQuery = `
+SELECT email FROM _registeration WHERE email = $1 LIMIT 1
+`;
+const emailResult = await pool.query(checkEmailQuery, [email]);
+
+if (emailResult.rows.length > 0) {
+return res.status(200).json({
+success: false,
+message: "Email address already registered",
+});
+}
+
+// Step 3: Insert new user
+const insertQuery = `
+INSERT INTO _registeration (name, email, password, mobileno)
+VALUES ($1, $2, $3, $4)
+`;
+await pool.query(insertQuery, [name, email, password, mobileno]);
+
+return res.status(200).json({
+success: true,
+message: "Registered successfully",
+});
+
+} catch (err) {
+console.error("❌ Registration error:", err.message);
+return res.status(500).json({
+success: false,
+message: "System error. Please try later.",
+});
+}
+});
 
 
 
@@ -282,6 +282,7 @@ message: "Registered successfully",
 // }
 // });
 // });
+
 
 app.get("/fetchCartGet", async (req, res) => {
 const fetchQuery = "SELECT * FROM _ecart";
@@ -740,60 +741,60 @@ res.status(500).json({ error: "Database query failed" });
 
 // fetchProductslist PostGreSQL 
 
-// app.get("/fetchProductslist", async (req, res) => {
-// const searchQuery = req.query.search || "";
-// const keywords = searchQuery.toLowerCase().split(/\s+/);
+app.get("/fetchProductslist", async (req, res) => {
+const searchQuery = req.query.search || "";
+const keywords = searchQuery.toLowerCase().split(/\s+/);
 
-// try {
-// const conditions = keywords.map((_, index) => `LOWER(name) ILIKE $${index + 1}`).join(" AND ");
-// const values = keywords.map((keyword) => `%${keyword}%`);
+try {
+const conditions = keywords.map((_, index) => `LOWER(name) ILIKE $${index + 1}`).join(" AND ");
+const values = keywords.map((keyword) => `%${keyword}%`);
 
-// const query = `
-// SELECT * FROM _imgproduct
-// WHERE ${conditions}
-// `;
+const query = `
+SELECT * FROM _imgproduct
+WHERE ${conditions}
+`;
 
-// const result = await pool.query(query, values);
+const result = await pool.query(query, values);
 
-// if (result.rows.length > 0) {
-// return res.json(result.rows);
-// }
-
-// const exactMatchQuery = `
-// SELECT * FROM _imgproduct
-// WHERE LOWER(img) = LOWER($1)
-// `;
-// const exactResult = await pool.query(exactMatchQuery, [searchQuery]);
-
-// res.json(exactResult.rows);
-// } catch (err) {
-// console.error("❌ Database query failed:", err.message);
-// res.status(500).json({ error: "Database query failed" });
-// }
-// });
-
-
-// app.get("/fetchProductslist", async (req, res) => {
-// try {
-// const result = await pool.query("SELECT * FROM _imgproduct");
-// res.json(result.rows);
-// } catch (err) {
-// console.error("Error fetching data:", err.message);
-// res.status(500).json({ error: "Database query failed" });
-// }
-// });
-
-
-
-app.get("/fetchProductslist", (req, res) => {
-db.query("SELECT * FROM imgproduct", (err, results) => {
-if (err) {
-console.error("Error fetching data:", err.stack);
-return res.status(500).json({ error: "Database query failed" });
+if (result.rows.length > 0) {
+return res.json(result.rows);
 }
-res.json(results);
+
+const exactMatchQuery = `
+SELECT * FROM _imgproduct
+WHERE LOWER(img) = LOWER($1)
+`;
+const exactResult = await pool.query(exactMatchQuery, [searchQuery]);
+
+res.json(exactResult.rows);
+} catch (err) {
+console.error("❌ Database query failed:", err.message);
+res.status(500).json({ error: "Database query failed" });
+}
 });
+
+
+app.get("/fetchProductslist", async (req, res) => {
+try {
+const result = await pool.query("SELECT * FROM _imgproduct");
+res.json(result.rows);
+} catch (err) {
+console.error("Error fetching data:", err.message);
+res.status(500).json({ error: "Database query failed" });
+}
 });
+
+
+
+// app.get("/fetchProductslist", (req, res) => {
+// db.query("SELECT * FROM imgproduct", (err, results) => {
+// if (err) {
+// console.error("Error fetching data:", err.stack);
+// return res.status(500).json({ error: "Database query failed" });
+// }
+// res.json(results);
+// });
+// });
 
 
 
@@ -1358,70 +1359,72 @@ error: err.message,
 //  Registeration ...
 
 
-app.post("/fetchAdmin", (req, res) => {
-const { adminuser, adminpass } = req.body;
-
-// SQL query to check
-// if the credentials match
-const insertQueryLogin =
-"SELECT * FROM admindashboard WHERE adminuser = ? AND adminpass = ?";
-
-db.query(insertQueryLogin, [adminuser, adminpass], (err, result) => {
-if (err) {
-console.log("Error fetching user:", err);
-res
-.status(500)
-.json({
-success: false,
-message: "Error fetching data",
-error: err.message,
-});
-return;
-}
-
-if (result.length > 0) {
-// User found,
-// login successful
-console.log("Login successful");
-res.status(200).json({ success: true, message: "Login successful" });
-} else {
-// No user found with
-//  the provided credentials
-console.log("Invalid credentials");
-res.status(401).json({ success: false, message: "Invalid credentials" });
-}
-});
-});
-
-// app.post("/fetchAdmin", async (req, res) => {
+// app.post("/fetchAdmin", (req, res) => {
 // const { adminuser, adminpass } = req.body;
 
-// const loginQuery = `
-// SELECT * FROM _admindashboard
-// WHERE adminuser = $1 AND adminpass = $2
-// `;
+// // SQL query to check
+// // if the credentials match
+// const insertQueryLogin =
+// "SELECT * FROM admindashboard WHERE adminuser = ? AND adminpass = ?";
 
-// try {
-// const result = await pool.query(loginQuery, [adminuser, adminpass]);
-
-// if (result.rows.length > 0) {
-// // User found
-// console.log("Login successful");
-// return res.status(200).json({ success: true, message: "Login successful" });
-// } else {
-// // No match
-// console.log("Invalid credentials");
-// return res.status(401).json({ success: false, message: "Invalid credentials" });
-// }
-// } catch (err) {
-// console.error("Error fetching user:", err.message);
-// return res.status(500).json({
+// db.query(insertQueryLogin, [adminuser, adminpass], (err, result) => {
+// if (err) {
+// console.log("Error fetching user:", err);
+// res
+// .status(500)
+// .json({
 // success: false,
 // message: "Error fetching data",
 // error: err.message,
 // });
+// return;
+// }
+
+// if (result.length > 0) {
+// // User found,
+// // login successful
+// console.log("Login successful");
+// res.status(200).json({ success: true, message: "Login successful" });
+// } else {
+// // No user found with
+// //  the provided credentials
+// console.log("Invalid credentials");
+// res.status(401).json({ success: false, message: "Invalid credentials" });
 // }
 // });
+// });
+
+
+
+app.post("/fetchAdmin", async (req, res) => {
+const { adminuser, adminpass } = req.body;
+
+const loginQuery = `
+SELECT * FROM _admindashboard
+WHERE adminuser = $1 AND adminpass = $2
+`;
+
+try {
+const result = await pool.query(loginQuery, [adminuser, adminpass]);
+
+if (result.rows.length > 0) {
+// User found
+console.log("Login successful");
+return res.status(200).json({ success: true, message: "Login successful" });
+} else {
+// No match
+console.log("Invalid credentials");
+return res.status(401).json({ success: false, message: "Invalid credentials" });
+}
+} catch (err) {
+console.error("Error fetching user:", err.message);
+return res.status(500).json({
+success: false,
+message: "Error fetching data",
+error: err.message,
+});
+}
+});
 
 
 // app.post("/registerAdmin", (req, res) => {
@@ -1581,7 +1584,7 @@ try {
 const client = await pool.connect();
 
 const insertQuery = `
-INSERT INTO custorder (
+INSERT INTO _custorder (
 name, mob, email, id, productname, price, quantity,
 gender, add_name, country, pincode, address, state,
 mobilenumber, alternativenumber, emailid,
@@ -1695,10 +1698,9 @@ console.log(`Server is running PORT on ${PORT}`);
 });
 
 
-
 setInterval(() => {
   axios
-    .get("https://naturalbuti.onrender.com/ping")
+    .get("https://namasya.onrender.com/ping")
     .then(() => {
       console.log("Pinged self to stay awake");
     })
@@ -1997,42 +1999,42 @@ res.status(500).send("Error updating product");
 
 // Delete Product
 
-app.post("/deletebyname", (req, res) => {
-const { name } = req.body;
-
-const deleteQuery = "DELETE FROM imgproduct WHERE name = ?";
-db.query(deleteQuery, [name], (err, result) => {
-if (err) {
-console.error("Error deleting product:", err.message);
-return res.status(500).json({ error: "Failed to delete product." });
-}
-if (result.affectedRows > 0) {
-res.status(200).json({ message: "Product deleted successfully!" });
-} else {
-res.status(404).json({ error: "Product not found." });
-}
-});
-});
-
-
-// app.post("/deletebyname", async (req, res) => {
+// app.post("/deletebyname", (req, res) => {
 // const { name } = req.body;
 
-// const deleteQuery = "DELETE FROM _imgproduct WHERE name = $1";
-
-// try {
-// const result = await pool.query(deleteQuery, [name]);
-
-// if (result.rowCount > 0) {
+// const deleteQuery = "DELETE FROM imgproduct WHERE name = ?";
+// db.query(deleteQuery, [name], (err, result) => {
+// if (err) {
+// console.error("Error deleting product:", err.message);
+// return res.status(500).json({ error: "Failed to delete product." });
+// }
+// if (result.affectedRows > 0) {
 // res.status(200).json({ message: "Product deleted successfully!" });
 // } else {
 // res.status(404).json({ error: "Product not found." });
 // }
-// } catch (err) {
-// console.error("Error deleting product:", err.message);
-// res.status(500).json({ error: "Failed to delete product." });
-// }
 // });
+// });
+
+
+app.post("/deletebyname", async (req, res) => {
+const { name } = req.body;
+
+const deleteQuery = "DELETE FROM _imgproduct WHERE name = $1";
+
+try {
+const result = await pool.query(deleteQuery, [name]);
+
+if (result.rowCount > 0) {
+res.status(200).json({ message: "Product deleted successfully!" });
+} else {
+res.status(404).json({ error: "Product not found." });
+}
+} catch (err) {
+console.error("Error deleting product:", err.message);
+res.status(500).json({ error: "Failed to delete product." });
+}
+});
 
 
 // app.get("/fetchDB", (req, res) => {
@@ -2048,6 +2050,7 @@ res.status(404).json({ error: "Product not found." });
 // }
 // });
 // });
+
 
 app.get("/fetchDB", async (req, res) => {
 const productQuery = "SELECT * FROM _imgproduct";
