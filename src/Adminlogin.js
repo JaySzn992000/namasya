@@ -50,9 +50,9 @@ return;
 
 try {
 
-// https://lavonne.onrender.com/fetchAdmin
+// http://localhost:3001/fetchAdmin
 
-const response = await fetch("https://lavonne.onrender.com/fetchAdmin", {
+const response = await fetch("http://localhost:3001/fetchAdmin", {
 method: "POST",
 headers: { "Content-Type": "application/json" },
 body: JSON.stringify({

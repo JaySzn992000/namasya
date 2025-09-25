@@ -105,6 +105,64 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 <Topnav></Topnav>
 <Navbar />
 
+<div className="Catelog_Items">
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045317_PISTA_GREEN_1.jpg?v=1753089413&width=1800" 
+loading="lazy"
+alt="Desi Ghee"></img>
+<h4>Silver Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045317_LAVENDER_1.jpg?v=1753089484&width=1800" 
+loading="lazy"
+alt="Garlic"></img>
+<h4>Voilet Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045406_OFF_WHITE_MULTI_1.jpg?v=1753091255&width=1800" 
+loading="lazy"
+alt="Ginger"></img>
+<h4>Light Pink Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045156_CREAM_1.jpg?v=1753091524&width=1800" 
+loading="lazy"
+alt="Radish"></img>
+<h4>Pinkish Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045403_YELLOW_1.jpg?v=1753091122&width=1800" 
+loading="lazy"
+alt="Jackfruit"></img>
+<h4>Yellow Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045159_OFF_WHITE_1.jpg?v=1753091167&width=1800" 
+loading="lazy"
+alt="Banana"></img>
+<h4>White Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045159_RED_1.jpg?v=1753089607&width=1800" 
+loading="lazy"
+alt="Bitter"></img>
+<h4>Red Salwar</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/cdn/shop/files/SSUS0045156_BLACK_1.jpg?v=1753089969&width=1800" 
+loading="lazy"
+alt="Sudh Ghee"></img>
+<h4>Black Salwar</h4>
+</div>
+</div>
+
 <Slider />
 
 {/* <VideoSliderComponent></VideoSliderComponent> */}

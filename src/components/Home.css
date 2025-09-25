@@ -5,6 +5,39 @@
 Hide */
 
 
+.Catelog_Items {
+display: flex;
+width: 80%;
+margin: auto;
+justify-content: center;
+gap: 1.7em;
+margin-top: 4.1em;
+margin-bottom: 3.3em;
+flex-wrap: nowrap;
+overflow: hidden;
+}
+
+
+.Catelog_ItemsScnd {
+margin-top: 4.7em;
+}
+
+
+.Catelog_Items img {
+width: 107px;
+height: 107px;
+border: 1px solid #DCDCDC;
+border-radius: 50%;
+cursor: pointer;
+}
+
+
+.Catelog_Items div {
+line-height: 2.3em;
+text-align: center;
+flex-shrink: 0;
+}
+
 
 .password-field {
 position: relative;
@@ -41,7 +74,6 @@ font-size: 1.1rem;
 border-bottom: 1px solid #100424;
 background-color: rgb(255, 255, 255);
 }
-
 
 
 .tshirt_Left {
@@ -167,6 +199,35 @@ padding: 1.5em;
 
 @media (max-width: 768px) {
 
+.Catelog_Items {
+display: flex;
+width: 95%;
+gap: 0.5em;
+overflow-x: auto;
+scroll-behavior: smooth;
+cursor: grab;
+justify-content: flex-start;
+margin-top: 3.5em;
+margin-bottom: 2.7em;
+}
+
+
+.Catelog_Items img {
+width: 83px;
+height: 83px;
+border: 1px solid #DCDCDC;
+border-radius: 50%;
+}
+
+.Catelog_Items h4 {
+font-size: 0.8rem;
+}
+
+
+.Catelog_Items::-webkit-scrollbar {
+display: none;
+}
+
 
 .tshirt_Left {
 width: 100%;
@@ -232,6 +293,32 @@ margin-bottom: -.7em;
 /*  */
 
 @media (min-width: 768px) and (max-width: 1519px) {
+
+.Catelog_Items h4 {
+font-size: 0.8rem;
+}
+
+.Catelog_Items img {
+width: 107px;
+height: 107px;
+}
+
+.Catelog_Items {
+display: flex;
+overflow-x: auto;
+gap: 1.7em;
+width: 85%;
+margin: auto;
+margin-top: 3.7em;
+margin-bottom: 2.7em;
+scroll-behavior: smooth;
+justify-content: flex-start;
+cursor: grab;
+}
+
+.Catelog_Items::-webkit-scrollbar {
+display: none;
+}
 
 
 .tshirt_Left {

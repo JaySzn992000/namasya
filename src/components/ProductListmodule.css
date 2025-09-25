@@ -11,6 +11,7 @@ width: 100%;
 /* .. Total with , 
 Proudcts .. */
 
+
 .flex_productlist {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(227px, 0fr));
@@ -36,10 +37,8 @@ max-width: 231px;
 
 
 .flex_productlist .produclist_divContainer img {
-width: 85%;
-border-radius: 17px;
+width: 100%;
 margin-bottom: -0.5em;
-padding: 7px;
 }
 
 
@@ -75,7 +74,7 @@ color: rgb(70, 69, 69);
 
 
 .padding_contain #Review_Img {
-width: 33px;
+width: 21px;
 }
 
 
@@ -91,6 +90,11 @@ Start of Product Texts .. */
 
 .flex_inr {
 text-align: start;
+}
+
+
+.flex_inr .prdct_name {
+    margin-top: 1.5em;
 }
 
 
@@ -125,29 +129,21 @@ border-radius: 17px;
 .fa-heart_products {
 position: absolute;
 right: 0px;
-bottom: 1.2em;
+top: .4em;
 z-index: 999;
-padding: 9px;
+padding: 8px;
 font-size: 1.2rem;
-margin-right: .3em;
-margin-top: .2em;
-background-color: rgba(255, 255, 255, 0.967);
-color: rgb(0, 0, 0);
+margin-right: .4em;
+color: rgb(255, 255, 255);
+transition: 0.3s ease;
 cursor: pointer;
 border-radius: 50%;
 }
 
 
-.fa-heart_products {
-color: #DCDCDC;
-background-color: #FFFFFF;
-transition: background-color 0.3s ease;
-}
-
-
 .fa-heart_products.wishlist-active {
 color: #f8dccc !important;
-background-color: rgb(255, 255, 255);
+background-color: transparent !important;
 }
 
 
@@ -260,11 +256,10 @@ transform: translateX(30.3vw);
 position: relative;
 height: auto;
 margin-bottom: 2.1em;
-border-radius: 33px;
 border: 1px solid rgba(27, 6, 6, 0.055);
 box-shadow: 7px 12px 12px 5px rgba(19, 19, 19, 0.073);
 }
- 
+
 
 .header_Filter {
 width: 67%;

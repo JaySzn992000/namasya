@@ -23,7 +23,7 @@ JSON.parse(localStorage.getItem("wishlistStatus")) || {};
 setWishlistStatus(storedWishlistStatus);
 
 axios
-.get("https://namasya.onrender.com/fetchProductslist")
+.get("http://localhost:3001/fetchProductslist")
 .then((response) => {
 setArrayStore(response.data);
 setFilteredProducts(response.data);
@@ -34,13 +34,12 @@ console.error("Error fetching data:", error);
 });
 }, [] );
 
-
 const location = useLocation();
 const query = new URLSearchParams(location.search).get("search");
 useEffect(() => {
 if (query) {
 axios
-.get("https://namasya.onrender.com/fetchProductslist", {
+.get("http://localhost:3001/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -52,7 +51,7 @@ console.error("Error fetching products:", error);
 });
 } else {
 axios
-.get("https://namasya.onrender.com/fetchProductslist")
+.get("http://localhost:3001/fetchProductslist")
 .then((response) => {
 setAllProducts(response.data);
 setFilteredProducts(response.data);
@@ -145,6 +144,7 @@ content="Taste the tradition with our authentic pickle range. Shop online for sp
 <div className="flex_productlist">
 {filteredProducts.map((productlist) => (
 <div key={productlist.id} className="produclist_divContainer">
+
 <i
 onClick={() => sendToWishlist(productlist)}
 className={`fa fa-heart fa-heart_products ${
@@ -161,7 +161,7 @@ wishlistStatus[productlist.id] ? "wishlist-active" : ""
 <Link to={`/products/${slugify(productlist.name)}/${productlist.id}`}>
 
 <img
-src={`https://namasya.onrender.com${productlist.file_path}`}
+src={productlist.file_path}
 alt={productlist.name}
 loading="lazy"
 />
@@ -176,7 +176,7 @@ loading="lazy"
 {/*  */}
 
 <Link to={`/products/${slugify(productlist.name)}/${productlist.id}`}>
-<li>{productlist.name}</li>
+<li className="prdct_name" >{productlist.name}</li>
 </Link>
 
 {/*  */}
