@@ -17,7 +17,7 @@ const query = new URLSearchParams(location.search).get("search");
 
 useEffect(() => {
 axios
-.get("http://localhost:3001/fetchProductslist")
+.get("https://namasya.onrender.com/fetchProductslist")
 .then((response) => {
 setAllProducts(response.data);
 setFilteredProducts(limit ? response.data.slice(0, limit) : response.data);
@@ -29,7 +29,7 @@ console.error("Error fetching products:", error);
 useEffect(() => {
 if (query) {
 axios
-.get("http://localhost:3001/fetchProductslist", {
+.get("https://namasya.onrender.com/fetchProductslist", {
 params: { search: query },
 })
 .then((response) => {
@@ -113,7 +113,7 @@ wishlistStatus[product.id] ? "active_wishlist" : ""
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`http://localhost:3001${product.file_path}`}
+src={`https://namasya.onrender.com${product.file_path}`}
 alt={product.name}
 className="product_image"
 />
