@@ -78,7 +78,7 @@ quantities,
 
 const getProductImagePath = (productId) => {
 const product = productData.find((p) => p.id === productId);
-return product ? `https://namasya.onrender.com${product.file_path}` : "";
+return product ? product.file_path : "";
 };
 
 
