@@ -1694,20 +1694,20 @@ res.status(500).json({ message: "Database update error", error: err.message });
 // for Laptop ..
 
 app.listen(PORT, () => {
-console.log(`Server is running PORT on ${PORT}`);
+  console.log(`Server is running on PORT ${PORT}`);
+
+  // start self-ping inside app.listen
+  setInterval(() => {
+    axios
+      .get("https://namasya.onrender.com/ping")
+      .then(() => {
+        console.log("Pinged self to stay awake");
+      })
+      .catch((err) => {
+        console.error("Ping failed", err.message);
+      });
+  }, 5 * 60 * 1000); // 5 minutes
 });
-
-
-setInterval(() => {
-  axios
-    .get("https://namasya.onrender.com/ping")
-    .then(() => {
-      console.log("Pinged self to stay awake");
-    })
-    .catch((err) => {
-      console.error("Ping failed", err.message);
-    });
-}, 5 * 60 * 1000); 
 
 
 
