@@ -113,7 +113,7 @@ wishlistStatus[product.id] ? "active_wishlist" : ""
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://namasya.onrender.com${product.file_path}`}
+src={product.file_path}
 alt={product.name}
 className="product_image"
 />
