@@ -1707,7 +1707,7 @@ setInterval(() => {
     .catch((err) => {
       console.error("Ping failed", err.message);
     });
-}, 10 * 60 * 1000); 
+}, 5 * 60 * 1000); 
 
 
 
