@@ -1707,7 +1707,7 @@ app.listen(PORT, () => {
       .catch((err) => {
         console.error("Ping failed", err.message);
       });
-  }, 10 * 1000); // 5 minutes
+  }, 10 * 60* 1000); // 5 minutes
 });
 
 
