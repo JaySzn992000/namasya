@@ -331,7 +331,7 @@ WHERE LOWER(img) = LOWER($1)
 `;
 
 try {
-const result = await pool.query(exactMatchQuery, ['Mango Pickle']);
+const result = await pool.query(exactMatchQuery, ['FloralSarees']);
 res.json(result.rows);
 } catch (err) {
 console.error("Error fetching data:", err.message);
