@@ -161,7 +161,7 @@ product details */}
 
 <Link to={`/product/${product.id}`}>
 <img
-src={`https://namasya.onrender.com${product.file_path}`}
+src={product.file_path}
 alt={product.name}
 />
 </Link>
