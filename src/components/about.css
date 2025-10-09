@@ -48,6 +48,8 @@ color: rgb(116, 115, 115);
 .about_flex_ {
 flex-direction: column;
 margin-top: 3.7em;
+justify-content: center;
+align-items: center;
 margin-bottom: 3.3em;
 }
 
