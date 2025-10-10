@@ -531,8 +531,7 @@ display: none;
 
 .flex_nav_ProfileSection .fa-search {
 position: absolute;
-margin-top: -0.1em;
-right: 1.3em;
+right: 1.7em;
 font-size: 1rem;
 }
 
@@ -743,8 +742,8 @@ margin-top: 1.2em;
 margin-top: 1.2em;
 }
 
-}
 
+}
 
 
 @media (min-width : 1025px) and (max-width : 1516px) {
@@ -752,5 +751,25 @@ margin-top: 1.2em;
 .div_ul .fa-angle-down {
 display: none;
 }
+
+.Product_navbar .nav_ul {
+display: flex;
+gap: 1em;
+margin-left: -.7em;
+margin-right: .5em;
+}
+
+/* .Product_navbar .nav_ul {
+display: none;
+} */
+
+.flex_nav_ProfileSection {
+    gap: .2em;
+}
+
+.afterSearch_prodct {
+width: 227px;
+}
+
 
 }
