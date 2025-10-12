@@ -28,7 +28,7 @@ const [message, setMessage] = useState("");
 
 
 useEffect(() => {
-fetch(`http://localhost:3001/products/${id}`)
+fetch(`https://namasya.onrender.com/products/${id}`)
 .then(res => res.json())
 .then(data => {
 });
@@ -39,7 +39,7 @@ useEffect(() => {
 const fetchProduct = async () => {
 try {
 const response = await axios.get(
-"http://localhost:3001/fetchProductslist"
+"https://namasya.onrender.com/fetchProductslist"
 );
 const data = response.data;
 const product = data.find((product) => product.id === parseInt(id));
@@ -162,56 +162,57 @@ content="https://yourdomain.com/images/pickle-default.jpg"
 
 <div className="product-details">
 
+{/* Mobile Slider */}
+
 <div className="mobile-slider">
-<Slider {...sliderSettings}>
-<div>
 
-<img
-className="product_img"
-src={`http://localhost:3001${arrayStore.file_path}`}
-alt=''
-loading="lazy"
-/>
-</div>
-<div>
+  <Slider {...sliderSettings}>
+    <div>
+      <img
+        className="product_img mobile-slider-img"
+        src={arrayStore.file_path}
+        alt={`${arrayStore.name} - Image 1`}
+        loading="lazy"
+      />
+    </div>
 
-<img
-className="product_img"
-src={`http://localhost:3001${arrayStore.file_path1}`}
-alt=''
-loading="lazy"
-/>
-</div>
-<div>
+    <div>
+      <img
+        className="product_img mobile-slider-img"
+        src={arrayStore.file_path1}
+        alt={`${arrayStore.name} - Image 2`}
+        loading="lazy"
+      />
+    </div>
 
-<img
-className="product_img"
-src={`http://localhost:3001${arrayStore.file_path2}`}
-alt=''
-loading="lazy"
-/>
-</div>
-<div>
+    <div>
+      <img
+        className="product_img mobile-slider-img"
+        src={arrayStore.file_path2}
+        alt={`${arrayStore.name} - Image 3`}
+        loading="lazy"
+      />
+    </div>
 
-<img
-className="product_img"
-src={`http://localhost:3001${arrayStore.file_path3}`}
-alt=''
-loading="lazy"
-/>
-</div>
-</Slider>
-
+    <div>
+      <img
+        className="product_img mobile-slider-img"
+        src={arrayStore.file_path3}
+        alt={`${arrayStore.name} - Image 4`}
+        loading="lazy"
+      />
+    </div>
+  </Slider>
+  
 </div>
 
 {/* Thumbnails for 
 desktop view */}
 
-
 <div className="thumbnails-container">
 <img
 className="thumbnail"
-src={`http://localhost:3001${arrayStore.file_path1}`}
+src={`https://namasya.onrender.com${arrayStore.file_path1}`}
 alt="home made pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path1)}
@@ -219,7 +220,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path1)}
 
 <img
 className="thumbnail"
-src={`http://localhost:3001${arrayStore.file_path2}`}
+src={`https://namasya.onrender.com${arrayStore.file_path2}`}
 alt="ingredients used pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path2)}
@@ -227,7 +228,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path2)}
 
 <img
 className="thumbnail"
-src={`http://localhost:3001${arrayStore.file_path3}`}
+src={`https://namasya.onrender.com${arrayStore.file_path3}`}
 alt="customized pickles"
 onClick={() => handleThumbnailClick(arrayStore.file_path3)}
 loading="lazy"
@@ -243,7 +244,7 @@ with zoom */}
 <Zoom>
 <img
 className="product_img"
-src={`http://localhost:3001${mainImage}`}
+src={`https://namasya.onrender.com${mainImage}`}
 alt={arrayStore.name}
 loading="lazy"
 />
