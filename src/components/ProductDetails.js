@@ -28,7 +28,7 @@ const [message, setMessage] = useState("");
 
 
 useEffect(() => {
-fetch(`https://namasya.onrender.com/products/${id}`)
+fetch(`http://localhost:3001/products/${id}`)
 .then(res => res.json())
 .then(data => {
 });
@@ -39,7 +39,7 @@ useEffect(() => {
 const fetchProduct = async () => {
 try {
 const response = await axios.get(
-"https://namasya.onrender.com/fetchProductslist"
+"http://localhost:3001/fetchProductslist"
 );
 const data = response.data;
 const product = data.find((product) => product.id === parseInt(id));
@@ -168,7 +168,7 @@ content="https://yourdomain.com/images/pickle-default.jpg"
 
 <img
 className="product_img"
-src={`https://namasya.onrender.com${arrayStore.file_path}`}
+src={`http://localhost:3001${arrayStore.file_path}`}
 alt=''
 loading="lazy"
 />
@@ -177,7 +177,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://namasya.onrender.com${arrayStore.file_path1}`}
+src={`http://localhost:3001${arrayStore.file_path1}`}
 alt=''
 loading="lazy"
 />
@@ -186,7 +186,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://namasya.onrender.com${arrayStore.file_path2}`}
+src={`http://localhost:3001${arrayStore.file_path2}`}
 alt=''
 loading="lazy"
 />
@@ -195,7 +195,7 @@ loading="lazy"
 
 <img
 className="product_img"
-src={`https://namasya.onrender.com${arrayStore.file_path3}`}
+src={`http://localhost:3001${arrayStore.file_path3}`}
 alt=''
 loading="lazy"
 />
@@ -208,13 +208,10 @@ loading="lazy"
 desktop view */}
 
 
-{/* Thumbnails for 
-desktop view */}
-
 <div className="thumbnails-container">
 <img
 className="thumbnail"
-src={arrayStore.file_path1}
+src={`http://localhost:3001${arrayStore.file_path1}`}
 alt="home made pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path1)}
@@ -222,7 +219,7 @@ onClick={() => handleThumbnailClick(arrayStore.file_path1)}
 
 <img
 className="thumbnail"
-src={arrayStore.file_path2}
+src={`http://localhost:3001${arrayStore.file_path2}`}
 alt="ingredients used pickles"
 loading="lazy"
 onClick={() => handleThumbnailClick(arrayStore.file_path2)}
@@ -230,12 +227,13 @@ onClick={() => handleThumbnailClick(arrayStore.file_path2)}
 
 <img
 className="thumbnail"
-src={arrayStore.file_path3}
+src={`http://localhost:3001${arrayStore.file_path3}`}
 alt="customized pickles"
 onClick={() => handleThumbnailClick(arrayStore.file_path3)}
 loading="lazy"
 />
 </div>
+
 
 <div className="product-img-container">
 
@@ -245,7 +243,7 @@ with zoom */}
 <Zoom>
 <img
 className="product_img"
-src={mainImage}
+src={`http://localhost:3001${mainImage}`}
 alt={arrayStore.name}
 loading="lazy"
 />
@@ -318,10 +316,11 @@ Check
 
 <img
 className="iconDetails"
-src="https://www.flavoursguru.com/catalog/view/theme/default/image/cart-icon.svg"
+src="https://cdn-icons-png.flaticon.com/128/9219/9219671.png"
 alt=""
 loading="lazy"
 ></img>
+
 ADD TO CART
 </button>
 
@@ -329,7 +328,7 @@ ADD TO CART
 <button className="go-toCart" id="btn" onClick={handleGoToCart}>
 <img
 className="iconDetails"
-src="https://www.flavoursguru.com/catalog/view/theme/default/image/order-now.svg"
+src="https://cdn-icons-png.flaticon.com/128/3185/3185876.png"
 loading="lazy"
 alt=""
 ></img>
@@ -345,8 +344,6 @@ GO TO CART
 <div className="descproduct">
 
 <h2>Description</h2>
-  
-<p>Size</p>
 
 <p style={{marginTop : '-1.5em'}} className="prdctDetails">
 
@@ -370,3 +367,4 @@ cart: state.cart,
 });
 
 export default connect(mapStateToProps, { addToCart })(ProductDetails);
+
