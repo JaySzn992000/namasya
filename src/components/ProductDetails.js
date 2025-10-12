@@ -345,6 +345,8 @@ GO TO CART
 <div className="descproduct">
 
 <h2>Description</h2>
+  
+<p>Size</p>
 
 <p style={{marginTop : '-1.5em'}} className="prdctDetails">
 
