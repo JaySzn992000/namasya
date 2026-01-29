@@ -1700,7 +1700,7 @@ app.listen(PORT, () => {
   // start self-ping inside app.listen
   setInterval(() => {
     axios
-      .get("https://securematic.onrender.com/ping")
+      .get("https://namasya.onrender.com/ping")
       .then(() => {
         console.log("Pinged self to stay awake");
       })
