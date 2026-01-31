@@ -107,59 +107,59 @@ content="Pickles, Homemade Achaar, Mango Pickle, Buy Pickles Online, Indian Pick
 
 <div className="Catelog_Items">
 <div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045317_PISTA_GREEN_1.jpg?v=1753089413&width=1800" 
-loading="lazy"
-alt="Desi Ghee"></img>
-<h4>Silver Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045317_LAVENDER_1.jpg?v=1753089484&width=1800" 
-loading="lazy"
-alt="Garlic"></img>
-<h4>Voilet Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045406_OFF_WHITE_MULTI_1.jpg?v=1753091255&width=1800" 
-loading="lazy"
-alt="Ginger"></img>
-<h4>Light Pink Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045156_CREAM_1.jpg?v=1753091524&width=1800" 
-loading="lazy"
-alt="Radish"></img>
-<h4>Pinkish Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045403_YELLOW_1.jpg?v=1753091122&width=1800" 
-loading="lazy"
-alt="Jackfruit"></img>
-<h4>Yellow Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045159_OFF_WHITE_1.jpg?v=1753091167&width=1800" 
-loading="lazy"
-alt="Banana"></img>
-<h4>White Salwar</h4>
-</div>
-
-<div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045159_RED_1.jpg?v=1753089607&width=1800" 
+<img src="https://www.koskii.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0049%2F3649%2F9315%2Ffiles%2FSSUS0044108_BLACK_1_800x800.jpg%3Fv%3D1750831460&w=1920&q=75" 
 loading="lazy"
 alt="Bitter"></img>
-<h4>Red Salwar</h4>
+<h4>Black Bling</h4>
 </div>
 
 <div>
-<img src="https://www.koskii.com/cdn/shop/files/SSUS0045156_BLACK_1.jpg?v=1753089969&width=1800" 
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0044218_ROYAL_BLUE_PARROT_GREEN_1_800x800.jpg?v=1747723892&width=1200" 
+loading="lazy"
+alt="Desi Ghee"></img>
+<h4>Royal Blue</h4>
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0044216_PINK_ORANGE_1_800x800.jpg?v=1747995697&width=1200" 
+loading="lazy"
+alt="Garlic"></img>
+<h4>Pink Zariwork soft</h4>
+</div>
+
+<div>
+<img src="https://www.koskii.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0049%2F3649%2F9315%2Ffiles%2FSSUS0046246_RANI_PINK_1_800x800.jpg%3Fv%3D1757922576&w=1920&q=75" 
+loading="lazy"
+alt="Ginger"></img>
+<h4>Pink Katdana</h4>
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0047733_TURQUOISE_BLUE_1_800x800.jpg?v=1763386170&width=1200" 
+loading="lazy"
+alt="Radish"></img>
+<h4>Turquoise Blue</h4>
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0046318_RUST_1_800x800.jpg?v=1764413219&width=1200" 
+loading="lazy"
+alt="Jackfruit"></img>
+<h4>Rest Threadwork</h4>
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0044116_PISTA_GREEN_1_800x800.jpg?v=1752040860&width=1200" 
+loading="lazy"
+alt="Banana"></img>
+<h4>Pista Green</h4>
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/SSUS0044115_CREAM_MULTI_1_800x800.jpg?v=1750847036&width=1200" 
 loading="lazy"
 alt="Sudh Ghee"></img>
-<h4>Black Salwar</h4>
+<h4>Cream Zariwork</h4>
 </div>
 </div>
 
