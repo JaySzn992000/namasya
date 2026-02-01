@@ -111,7 +111,7 @@ return;
 }
 
 try {
-const response = await fetch("https://lavonne.onrender.com/updateform", {
+const response = await fetch("https://namasya.onrender.com/updateform", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",
